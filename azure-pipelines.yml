@@ -12,14 +12,8 @@ steps:
     command: 'buildAndPush'
     Dockerfile: 'Dockerfile'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/nginx-folder'
-    Contents: 'nginx.yaml'  # Adjusted to specifically target nginx.yaml
-    TargetFolder: '$(Build.ArtifactStagingDirectory)/nginx-manifests'
-
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)/s'
-    artifact: 'nginx-manifest'
+    targetPath: '$(Pipeline.Workspace)/s/nginx-folder'
+    artifact: 'manifest'
     publishLocation: pipeline
