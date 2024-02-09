@@ -14,7 +14,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)'
+    SourceFolder: '$(Build.SourcesDirectory)/nginx-folder'
     Contents: 'nginx.yaml'  # Adjusted to specifically target nginx.yaml
     TargetFolder: '$(Build.ArtifactStagingDirectory)/nginx-manifests'
 
