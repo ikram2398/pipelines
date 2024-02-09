@@ -10,4 +10,4 @@ steps:
     containerRegistry: 'container_registry'
     repository: 'Nginx'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: 'Dockerfile'
